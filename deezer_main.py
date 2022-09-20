@@ -32,10 +32,13 @@ driver.get(playlist)
 listoflinks = []
 print("Links to every track from playlist: ")
 try:
-    refuse_button = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.ID, "gdpr-btn-refuse-all"))
-    )
-    refuse_button.click()
+    try:
+        refuse_button = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.ID, "gdpr-btn-refuse-all"))
+        )
+        refuse_button.click()
+    except:
+        print("Refuse button didn't pop up!")
     numberoftracks = driver.find_element(By.CSS_SELECTOR, "#page_naboo_playlist > div.catalog-content > div > div._5BJsj > div > div._2yyo6 > ul > li:nth-child(1)").text
     numberoftracks = numberoftracks[0:len(numberoftracks)-7]
     numberoftracks = int(numberoftracks)
