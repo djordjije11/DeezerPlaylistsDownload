@@ -8,7 +8,11 @@ That's why I wrote the code that does all that for me.
 I used a Python programming language and a Selenium library.
 The code consists of two scripts and one .txt file.
 The process starts by running the <b>deezer_main.py</b> script, where a user in the console enters the link of the playlist.
-The share links of all songs from the Deezer playlist are collected and stored in the <b>links_file.txt</b> file.
+A web page of the playlist opens up in a Chrome browser window and share links of all songs from the Deezer playlist are being collected and stored in the <b>links_file.txt</b> file.
+
+- <b>IMPORTANT</b>
+  
+  The <b>playlist</b> that the user wants to download must be <b>public</b>. Also, the user should <b>expand the browser window</b> so there wouldn't be any errors. 
 
 After the deezer_main.py script is finished, the user runs <b>telegram_main.py</b> script, which opens a Chrome browser window with the displayed QR code
 through which the user logs in to Telegram. 
