@@ -69,7 +69,7 @@ try:
                                     "#modal_sharebox > div.modal-body > div.share-content.share-infos > div.share-thumbnail-infos > div.share-action > div > div.control-input > input")
         link = input.get_attribute('value')
         listoflinks.append(link)
-        # print(str(x) + ": " + link)
+        print(str(x) + ". track: " + link)
         close_button = driver.find_element(By.ID, "modal-close")
         close_button.click()
         driver.execute_script(
@@ -80,5 +80,5 @@ except Exception as e:
 driver.quit()
 with open("links_file.txt", "w") as f:
     for element in listoflinks:
-        f.write(str(element) +"\n")
+        f.write(str(element) + "\n")
 print("Links to all " + str(len(listoflinks)) + " tracks are in the \"links_file.txt\"")
