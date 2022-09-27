@@ -1,4 +1,4 @@
-# DeezerMusicDownload
+# DeezerPlaylistsDownload
 The aim of this project is to provide fast music download without my management.
 Downloading albums or specific songs from Deezer is possible on Telegram using the Deezer Music Bot chat.
 However, it is not possible to download a playlist. Since I have playlists with a lot of songs (almost a thousand), 
