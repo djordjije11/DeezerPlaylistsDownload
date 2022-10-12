@@ -41,7 +41,7 @@ except:
     sys.exit(1)
 
 print("Great! Now wait and make sure multiple downloading is enabled on your browser.")
-message = driver.find_element(By.ID, "message-input-text")
+message = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "message-input-text")))
 action = ActionChains(driver).move_to_element(message).send_keys(list[0]).perform()
 WebDriverWait(driver, 5).until(wait_for_text_to_equal((By.ID, "message-input-text"), list[0]))
 action = ActionChains(driver).send_keys(Keys.RETURN).perform()
